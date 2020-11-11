@@ -58,7 +58,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /*--------------------------------------------------------------
 # Header
---------------------------------------------------------------*/
+
 #header {
   position: fixed;
   top: 0;
@@ -69,19 +69,20 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 9997;
   transition: all 0.5s;
   padding: 0 15px;
-  background: #040b14;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0,0,0,.0));
+ 
   overflow-y: auto;
 }
 
 #header .profile img {
-  margin: 15px auto;
+  margin: 50px auto 30px;
   display: block;
   width: 120px;
-  border: 8px solid #2c2f3f;
+  border: 6px solid darkgoldenrod;
 }
 
 #header .profile h1 {
-  font-size: 24px;
+  font-size: 20px;
   margin: 0;
   padding: 0;
   font-weight: 600;
@@ -128,6 +129,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: 0;
   }
 }
+--------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -233,12 +235,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero h1 {
-  margin: 0 0 10px 0;
-  font-family: 'Cabin Sketch', cursive; 
+  margin: -50px 0 10px 0;
+  font-family: 'Cabin', cursive; 
+  /*****
+  font-family: 'Oswald', sans-serif;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;**/
   font-size: 64px;
-  font-weight: 700;
-  line-height: 56px;
-  color: #fff;
+  font-weight: 900;
+  line-height: 75px;
+  letter-spacing: 0pt;
+  text-shadow: 2px 2px 6px #000000;
+  color: darkorange;
 }
 
 #hero p {
@@ -246,6 +253,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 50px;
   font-size: 26px;
   font-family: "Poppins", sans-serif;
+  text-shadow: 2px 2px 3px #000000;
 }
 
 #hero p span {
@@ -327,6 +335,28 @@ section {
   padding: 0;
 }
 
+.about img {
+  height: 400px;
+  width: 325px;
+  position: relative;
+  display: inline-block;
+ 
+}
+
+.about .img-bottom {
+  display: none;
+  position: fixed;
+  padding: 0;
+  margin-left: 15px;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.about .col-lg-4:hover .img-bottom {
+  display: inline;
+}
+
 .about .content ul li {
   padding-bottom: 10px;
 }
@@ -392,7 +422,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Akills
+# Skills
 --------------------------------------------------------------*/
 .skills .progress {
   height: 50px;
@@ -429,6 +459,10 @@ section {
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
+.resume {
+  background: #f5f8fd;
+}
+
 .resume .resume-title {
   font-size: 26px;
   font-weight: 700;
@@ -1052,15 +1086,15 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  padding: 15px;
+  padding: 30px 0;
+  margin: auto 0;
   color: #f4f6fd;
   font-size: 14px;
-  position: fixed;
+  position: relative;
   left: 0;
   bottom: 0;
-  width: 300px;
   z-index: 9999;
-  background: #040b14;
+  background: #484e57;
 }
 
 #footer .copyright {
