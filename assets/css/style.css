@@ -161,7 +161,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   color: darkorange;
-  padding: 12px 15px;
+  padding: 35px 15px;
   margin-bottom: 8px;
   transition: 0.3s;
   font-size: 15px;
@@ -221,6 +221,13 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+#nav-menu-container img {
+  display: inline-block;
+  position: absolute;
+  margin-left: 30px;
+  max-width: 150px;
+}
+
 #hero {
   width: 100%;
   height: 100vh;
@@ -245,14 +252,11 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero h1 {
   margin: -50px 0 10px 0;
-  font-family: 'Cabin', cursive; 
-  /*****
-  font-family: 'Oswald', sans-serif;
-  font-family: 'IBM Plex Sans Condensed', sans-serif;**/
-  font-size: 64px;
-  font-weight: 900;
-  line-height: 75px;
-  letter-spacing: 0pt;
+  font-family: 'Teko', sans-serif;
+  font-size: 80px;
+  font-weight: 400;
+  letter-spacing: 1pt;
+  line-height: 65px;
   text-shadow: 2px 2px 6px #000000;
   color: darkorange;
 }
