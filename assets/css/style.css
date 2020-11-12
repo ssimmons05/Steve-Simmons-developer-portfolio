@@ -131,16 +131,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 --------------------------------------------------------------*/
 
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Desktop Navigation */
-.nav-menu {
-  padding-top: 30px;
+#nav-menu-container * {
+  margin: 0;
+  z-index: 5;
 }
 
-.nav-menu * {
-  margin: 0;
+#nav-menu-container .row {
+  padding: 10px;
+  position: absolute;
+}
+
+.nav-menu  * {
+  display: inline-block;
   padding: 0;
   list-style: none;
 }
@@ -153,7 +160,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu a {
   display: flex;
   align-items: center;
-  color: #a8a9b4;
+  color: darkorange;
   padding: 12px 15px;
   margin-bottom: 8px;
   transition: 0.3s;
@@ -163,7 +170,11 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu a i {
   font-size: 24px;
   padding-right: 8px;
-  color: #6f7180;
+  color: darkorange;
+}
+
+.bx-home {
+  color: darkorange;
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
@@ -192,7 +203,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav-toggle i {
-  color: #149ddd;
+  color: darkorange;
 }
 
 .mobile-nav-active {
@@ -215,22 +226,20 @@ h1, h2, h3, h4, h5, h6 {
   height: 100vh;
   background: url("../img/teslariu-mihai-Z4XUEPBcW-o-unsplash.jpg") top center;
   background-size: cover;
+  
 }
 
-#hero:before {
+#hero::before {
   content: "";
-  background: rgba(5, 13, 24, 0.3);
   position: absolute;
-  bottom: 0;
   top: 0;
   left: 0;
-  right: 0;
   z-index: 1;
+  background: rgba(0 ,0, 0, .2);
 }
 
 #hero .hero-container {
   position: relative;
-  z-index: 2;
   min-width: 300px;
 }
 
@@ -263,6 +272,12 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 3px solid #149ddd;
 }
 
+@media (max-width: 1200px) {
+  #nav-menu-container .row {
+    display: none;
+  }
+}
+
 @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
@@ -271,7 +286,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
   #hero h1 {
-    font-size: 28px;
+    font-size: 36px;
     line-height: 36px;
   }
   #hero h2 {
@@ -281,10 +296,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+
+
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
-section {
+#portfolio, #about, #resume, #contact {
   padding: 60px 0;
   overflow: hidden;
 }
@@ -424,6 +441,7 @@ section {
 /*--------------------------------------------------------------
 # Skills
 --------------------------------------------------------------*/
+/*---------- DON'T NEED 
 .skills .progress {
   height: 50px;
   display: block;
@@ -455,6 +473,7 @@ section {
   transition: .9s;
   background-color: #149ddd;
 }
+--------------*/
 
 /*--------------------------------------------------------------
 # Resume
