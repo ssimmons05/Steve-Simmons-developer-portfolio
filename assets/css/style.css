@@ -290,8 +290,8 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
   #hero h1 {
-    font-size: 36px;
-    line-height: 36px;
+    font-size: 56px;
+    line-height: 46px;
   }
   #hero h2 {
     font-size: 18px;
@@ -645,8 +645,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------------------
-# Services
---------------------------------------------------------------*/
+# Services - DO NOT NEED
+
 .services .icon-box {
   margin-bottom: 20px;
 }
@@ -697,10 +697,11 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 24px;
   font-size: 14px;
 }
+--------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-# Testimonials
---------------------------------------------------------------*/
+# Testimonials - DO NOT NEED
+
 .testimonials .testimonial-item {
   box-sizing: content-box;
   text-align: center;
@@ -790,6 +791,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 30px 10px;
   }
 }
+--------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # Contact
