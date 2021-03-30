@@ -58,7 +58,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /*--------------------------------------------------------------
 # Header
---------------------------------------------------------------*/
+
 #header {
   position: fixed;
   top: 0;
@@ -69,19 +69,20 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 9997;
   transition: all 0.5s;
   padding: 0 15px;
-  background: #040b14;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0,0,0,.0));
+ 
   overflow-y: auto;
 }
 
 #header .profile img {
-  margin: 15px auto;
+  margin: 50px auto 30px;
   display: block;
   width: 120px;
-  border: 8px solid #2c2f3f;
+  border: 6px solid darkgoldenrod;
 }
 
 #header .profile h1 {
-  font-size: 24px;
+  font-size: 20px;
   margin: 0;
   padding: 0;
   font-weight: 600;
@@ -128,17 +129,25 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: 0;
   }
 }
+--------------------------------------------------------------*/
+
 
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Desktop Navigation */
-.nav-menu {
-  padding-top: 30px;
+#nav-menu-container * {
+  margin: 0;
+  z-index: 5;
 }
 
-.nav-menu * {
-  margin: 0;
+#nav-menu-container .row {
+  padding: 10px;
+  position: absolute;
+}
+
+.nav-menu  * {
+  display: inline-block;
   padding: 0;
   list-style: none;
 }
@@ -151,8 +160,8 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu a {
   display: flex;
   align-items: center;
-  color: #a8a9b4;
-  padding: 12px 15px;
+  color: darkorange;
+  padding: 35px 15px;
   margin-bottom: 8px;
   transition: 0.3s;
   font-size: 15px;
@@ -161,7 +170,11 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu a i {
   font-size: 24px;
   padding-right: 8px;
-  color: #6f7180;
+  color: darkorange;
+}
+
+.bx-home {
+  color: darkorange;
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
@@ -190,7 +203,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav-toggle i {
-  color: #149ddd;
+  color: darkorange;
 }
 
 .mobile-nav-active {
@@ -208,37 +221,44 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+#nav-menu-container img {
+  display: inline-block;
+  position: absolute;
+  margin-left: 30px;
+  max-width: 150px;
+}
+
 #hero {
   width: 100%;
   height: 100vh;
   background: url("../img/teslariu-mihai-Z4XUEPBcW-o-unsplash.jpg") top center;
   background-size: cover;
+  
 }
 
-#hero:before {
+#hero::before {
   content: "";
-  background: rgba(5, 13, 24, 0.3);
   position: absolute;
-  bottom: 0;
   top: 0;
   left: 0;
-  right: 0;
   z-index: 1;
+  background: rgba(0 ,0, 0, .2);
 }
 
 #hero .hero-container {
   position: relative;
-  z-index: 2;
   min-width: 300px;
 }
 
 #hero h1 {
-  margin: 0 0 10px 0;
-  font-family: 'Cabin Sketch', cursive; 
-  font-size: 64px;
-  font-weight: 700;
-  line-height: 56px;
-  color: #fff;
+  margin: -50px 0 10px 0;
+  font-family: 'Teko', sans-serif;
+  font-size: 80px;
+  font-weight: 400;
+  letter-spacing: 1pt;
+  line-height: 65px;
+  text-shadow: 2px 2px 6px #000000;
+  color: darkorange;
 }
 
 #hero p {
@@ -246,6 +266,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 50px;
   font-size: 26px;
   font-family: "Poppins", sans-serif;
+  text-shadow: 2px 2px 3px #000000;
 }
 
 #hero p span {
@@ -253,6 +274,12 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 4px;
   letter-spacing: 1px;
   border-bottom: 3px solid #149ddd;
+}
+
+@media (max-width: 1200px) {
+  #nav-menu-container .row {
+    display: none;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -263,8 +290,8 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
   #hero h1 {
-    font-size: 28px;
-    line-height: 36px;
+    font-size: 56px;
+    line-height: 46px;
   }
   #hero h2 {
     font-size: 18px;
@@ -273,10 +300,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+
+
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
-section {
+#portfolio, #about, #resume, #contact {
   padding: 60px 0;
   overflow: hidden;
 }
@@ -325,6 +354,28 @@ section {
 .about .content ul {
   list-style: none;
   padding: 0;
+}
+
+.about img {
+  height: 400px;
+  width: 325px;
+  position: relative;
+  display: inline-block;
+ 
+}
+
+.about .img-bottom {
+  display: none;
+  position: fixed;
+  padding: 0;
+  margin-left: 15px;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.about .col-lg-4:hover .img-bottom {
+  display: inline;
 }
 
 .about .content ul li {
@@ -392,8 +443,9 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Akills
+# Skills
 --------------------------------------------------------------*/
+/*---------- DON'T NEED 
 .skills .progress {
   height: 50px;
   display: block;
@@ -425,10 +477,15 @@ section {
   transition: .9s;
   background-color: #149ddd;
 }
+--------------*/
 
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
+.resume {
+  background: #f5f8fd;
+}
+
 .resume .resume-title {
   font-size: 26px;
   font-weight: 700;
@@ -587,9 +644,12 @@ section {
   bottom: 0;
 }
 
+a p.bx {
+  font-size: 1.25rem;
+}
 /*--------------------------------------------------------------
-# Services
---------------------------------------------------------------*/
+# Services - DO NOT NEED
+
 .services .icon-box {
   margin-bottom: 20px;
 }
@@ -640,10 +700,11 @@ section {
   line-height: 24px;
   font-size: 14px;
 }
+--------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-# Testimonials
---------------------------------------------------------------*/
+# Testimonials - DO NOT NEED
+
 .testimonials .testimonial-item {
   box-sizing: content-box;
   text-align: center;
@@ -733,6 +794,7 @@ section {
     margin: 30px 10px;
   }
 }
+--------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # Contact
@@ -1052,15 +1114,15 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  padding: 15px;
+  padding: 30px 0;
+  margin: auto 0;
   color: #f4f6fd;
   font-size: 14px;
-  position: fixed;
+  position: relative;
   left: 0;
   bottom: 0;
-  width: 300px;
   z-index: 9999;
-  background: #040b14;
+  background: #484e57;
 }
 
 #footer .copyright {
