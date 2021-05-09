@@ -225,7 +225,7 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   position: absolute;
   margin-left: 30px;
-  max-width: 150px;
+  max-width: 120px;
 }
 
 #hero {
